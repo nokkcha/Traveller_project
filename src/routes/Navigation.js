@@ -1,13 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navigation = () => {
+const Navigation = ({ isLoggedIn, userObj }) => {
   return (
     <div>
-      <Link to="/">Home</Link>
-      <Link to="/about">about</Link>
-      <Link to="discovery">Discover</Link>
-      <Link to="Join">Join</Link>
+      {isLoggedIn ? (
+        <>
+          <Link to="/">Home</Link>
+          <Link to="/about">about</Link>
+          <Link to="/discovery">Discover</Link>
+        </>
+      ) : (
+        <>
+          <Link to="/login">Login</Link>
+          <Link to="/join">Join</Link>
+        </>
+      )}
     </div>
   );
 };
