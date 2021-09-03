@@ -3,11 +3,49 @@ import { initializeApp } from "@firebase/app";
 import { getAuth, createUserWithEmailAndPassword } from "@firebase/auth";
 import { firebaseConfig } from "../firebase";
 import { useHistory } from "react-router-dom";
+import styled from "styled-components";
+
+const Background = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+const Container = styled.div`
+  width: 371px;
+  height: 500px;
+  margin-top: 50px;
+`;
+
+const SignInput = styled.input`
+  border: 1px solid #dedede;
+  width: 320px;
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  ::-webkit-input-placeholder {
+    color: #dedede;
+    padding-left: 15px;
+  }
+`;
+
+const SignBtn = styled.input`
+  border: none;
+  width: 320px;
+  height: 50px;
+  border-radius: 5px;
+  background: #4d95a3;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+`;
 
 const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [line, setLine] = useState({ color: null });
   const history = useHistory();
 
   const onChange = (event) => {
@@ -33,26 +71,32 @@ const Auth = () => {
     }
   };
   return (
-    <>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          name="email"
-          placeholder="Email.."
-          onChange={onChange}
-          value={email}
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password.."
-          onChange={onChange}
-          value={password}
-        />
-        <input type="submit" value="가입하기" />
-        {error && <div>{error}</div>}
-      </form>
-    </>
+    <Background>
+      <Container>
+        <h2>회원가입</h2>
+        <h5>여행에 목 마를땐, 트래블러</h5>
+        <form onSubmit={onSubmit}>
+          <div>이메일</div>
+          <SignInput
+            type="text"
+            name="email"
+            placeholder="example@traveller.com"
+            onChange={onChange}
+            value={email}
+          />
+          <div>비밀번호</div>
+          <SignInput
+            type="password"
+            name="password"
+            placeholder="type password"
+            onChange={onChange}
+            value={password}
+          />
+          <SignBtn type="submit" value="가입하기" />
+          {error && <div>{error}</div>}
+        </form>
+      </Container>
+    </Background>
   );
 };
 
