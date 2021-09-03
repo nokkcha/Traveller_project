@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAuth, onAuthStateChanged } from "@firebase/auth";
 import Routes from "../routes/Routes";
+import "../assets/App.css";
 
 const App = () => {
   const [init, setInit] = useState(false);
