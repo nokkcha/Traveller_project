@@ -24,6 +24,7 @@ const App = () => {
       setInit(true);
     });
   }, []);
+
   return (
     <>
       {init ? (
