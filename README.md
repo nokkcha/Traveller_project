@@ -1,12 +1,12 @@
 <h1>(진행중)Traveller 프로젝트</h1>
 
-
 구현 기능
 
 <ul>
 <li>회원가입, 로그인(구현 완료)</li>
 <li>반응형 페이지</li>
 <li>CRUD 기능</li>
+<li>upsplash API 활용해 사진첩 생성</li>
   <li>찜하기 기능</li>
 </ul>
 
@@ -27,4 +27,3 @@
 
 <img width="875" alt="스크린샷 2021-09-04 오전 12 27 13" src="https://user-images.githubusercontent.com/74946505/132030315-3bbea3fa-566d-45bb-8779-0fc5acd0fe12.png">
 <img width="873" alt="스크린샷 2021-09-04 오전 12 26 59" src="https://user-images.githubusercontent.com/74946505/132030332-857b2b9c-b9b6-4f3f-8264-bdae54608052.png">
-
