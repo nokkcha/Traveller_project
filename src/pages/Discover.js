@@ -1,7 +1,50 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import ImageCard from "./ImageCard";
+
+const ModalBackground = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+`;
+
+const ModalButton = styled.button`
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 10%;
+  left: 90%;
+
+  @media (max-width: 902px) {
+    left: 85%;
+    top: 7%;
+  }
+`;
+
+const ModalContainer = styled.div`
+  position: fixed;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  max-height: 50rem;
+  width: 80%;
+  height: 70%;
+  padding: 30px;
+  overflow: scroll;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+
+  @media (max-width: 902px) {
+    height: 50%;
+  }
+`;
 
 const Background = styled.div`
   margin-top: 10%;
@@ -16,7 +59,7 @@ const Container = styled.div`
     border: 1px solid red;
   }
   @media (max-width: 902px) {
-    border: 1px solid blue;
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -26,11 +69,19 @@ const PicBox = styled.div`
   justify-items: center;
 `;
 
+const Location = styled.h5`
+  position: relative;
+  bottom: 40%;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+`;
+
 const Discover = () => {
-  const [image, setImage] = useState("");
+  const [modalData, setModalData] = useState("");
   const [pics, setPics] = useState([]);
   const [modal, setModal] = useState(false);
-  const clientId = "fThk0qnqDvaxXfXN87YljOp57a-H6YIVmrzgvYC70fY";
+  const clientId = "tIuczj1WWmW18XF0WhN7U9xec4qP2E_49X6vqv2J_JY";
 
   const getImages = async () => {
     await axios
@@ -47,10 +98,15 @@ const Discover = () => {
       });
   };
 
-  const ModalOpen = () => {
+  const ModalOpen = (pics) => {
     setModal(true);
     console.log("click");
-    console.log(modal);
+    setModalData(pics.target);
+    console.log(pics.target);
+  };
+
+  const closeModal = () => {
+    setModal(false);
   };
 
   useEffect(() => {
@@ -62,23 +118,27 @@ const Discover = () => {
       <Container>
         {pics.map((image) => (
           <>
-            <PicBox
-              modal={modal}
-              onClick={(event) => {
-                setModal(true);
-                setImage(event.target);
-              }}
-            >
+            <PicBox modal={modal} onClick={ModalOpen} key={image.id}>
               <img src={image.urls.small}></img>
               <h4>{image.user.name}</h4>
-              <h5>
+              <Location>
                 {image.location.title ? image.location.title : "anywhere"}
-              </h5>
+              </Location>
             </PicBox>
           </>
         ))}
       </Container>
-      {modal ? <ImageCard image={image} modal={modal} /> : null}
+      {modal ? (
+        <ModalBackground>
+          <ModalContainer>
+            <div></div>
+            <div>
+              <img src={modalData.src} width="100%" height="100%"></img>
+            </div>
+            <ModalButton onClick={closeModal}>&times;</ModalButton>
+          </ModalContainer>
+        </ModalBackground>
+      ) : null}
     </Background>
   );
 };
