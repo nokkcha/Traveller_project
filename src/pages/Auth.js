@@ -9,6 +9,7 @@ const Background = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 15%;
 `;
 
 const Container = styled.div`
@@ -23,6 +24,7 @@ const SignInput = styled.input`
   height: 50px;
   border-radius: 5px;
   margin-bottom: 20px;
+  padding: 0.2em 0.8em;
 
   ::-webkit-input-placeholder {
     color: #dedede;
@@ -32,7 +34,7 @@ const SignInput = styled.input`
 
 const SignBtn = styled.input`
   border: none;
-  width: 320px;
+  width: 345px;
   height: 50px;
   border-radius: 5px;
   background: #4d95a3;
@@ -45,7 +47,6 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [line, setLine] = useState({ color: null });
   const history = useHistory();
 
   const onChange = (event) => {

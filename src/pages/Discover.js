@@ -48,26 +48,32 @@ const ModalContainer = styled.div`
 
 const Background = styled.div`
   text-align: center;
-  margin-top: 10%;
+  margin-top: 15%;
+
+  @media screen and (max-width: 550px) {
+    margin-top: 30%;
+  }
 `;
 const Container = styled.div`
   margin-top: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  // border: 1px solid red;
+  column-gap: 20px;
+  margin-top: 10%;
 
   @media screen and (max-width: 550px) {
     grid-template-columns: repeat(1, minmax(250px, 1fr));
+    margin-top: 10%;
   }
 
   @media screen and (min-width: 550px) and (max-width: 870px) {
     grid-template-columns: repeat(2, minmax(250px, 2fr));
+    column-gap: 10rem;
   }
 `;
 
 const PicBox = styled.div`
   text-align: center;
-  // border: 1px solid blue;
   justify-items: center;
 `;
 
@@ -121,7 +127,7 @@ const Discover = () => {
 
   return (
     <Background>
-      <h2>Discover Where You Want.</h2>
+      <h2>세계 속 멋진 장소들을 찾아보세요!</h2>
       <Container>
         {pics.map((image) => (
           <>

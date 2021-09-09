@@ -4,7 +4,7 @@ import styled from "styled-components";
 import beach_img from "../assets/beach2.jpg";
 import About from "./About";
 const Container = styled.div`
-  margin-top: 16%;
+  margin-top: 20%;
   margin-left: 30px;
 
   @media screen and (max-width: 550px) {
@@ -20,7 +20,7 @@ const BackImage = styled.img`
   z-index: -1;
 
   @media screen and (max-width: 550px) {
-    top: 9%;
+    top: 7%;
     height: auto;
   }
 `;

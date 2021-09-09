@@ -9,7 +9,7 @@ const Background = styled.div`
   width: 100%;
   height: 500px;
   left: 0;
-  margin-top: 5%;
+  margin-top: 13%;
 `;
 
 const MainTitle = styled.h1`

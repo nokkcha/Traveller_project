@@ -16,7 +16,10 @@ const Board = ({ userObj }) => {
   const [texts, setTexts] = useState([]);
 
   useEffect(() => {
-    const q = query(collection(getFirestore(), "texts"), orderBy("createAt"));
+    const q = query(
+      collection(getFirestore(), "texts"),
+      orderBy("createAt", "desc")
+    );
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const textArray = querySnapshot.docs.map((doc) => {
         return {
@@ -41,7 +44,11 @@ const Board = ({ userObj }) => {
       </section>
       <section>
         {texts.map((text) => (
-          <Texts key={text.id} textObj={text} />
+          <Texts
+            key={text.id}
+            textObj={text}
+            isOwner={text.createrId === userObj.uid}
+          />
         ))}
       </section>
     </Container>

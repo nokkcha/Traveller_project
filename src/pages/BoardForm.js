@@ -5,24 +5,25 @@ import { addDoc } from "@firebase/firestore";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 31em;
+  width: 40em;
   display: grid;
   grid-template-row: 2fr 1fr;
   justify-items: baseline;
   margin-bottom: 30px;
 `;
 const TextInput = styled.input`
-  width: 30em;
+  width: 35em;
   height: 40px;
   border-radius: 15px;
   border: 1px solid #dedede;
+  padding: 0.5em 0.8em;
 `;
 
 const Button = styled.input`
   border: none;
   border-radius: 15px;
   margin-left: 20px;
-  background: #349386;
+  background: #337c8e;
   color: white;
   width: 70px;
   height: 2em;
