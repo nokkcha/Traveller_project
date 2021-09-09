@@ -2,9 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import beach_img from "../assets/beach2.jpg";
+import About from "./About";
 const Container = styled.div`
   margin-top: 16%;
   margin-left: 30px;
+
+  @media screen and (max-width: 550px) {
+    margin-top: 25%;
+  }
 `;
 
 const BackImage = styled.img`
@@ -15,13 +20,13 @@ const BackImage = styled.img`
   z-index: -1;
 
   @media screen and (max-width: 550px) {
-    top: 0;
-    height: 100%;
+    top: 9%;
+    height: auto;
   }
 `;
 
 const Button = styled.button`
-  background: #349386;
+  background: #337c8e;
   font-size: 16px;
   padding: 10px;
   width: 120px;
@@ -64,13 +69,17 @@ const SubTitle = styled.h6`
   }
 `;
 
+const Section = styled.div`
+  margin-top: 20%;
+`;
 const Home = () => {
   return (
     <>
       <Container>
         <SubTitle>Discover your places..</SubTitle>
         <Title>
-          Explore The <b>Best Places</b>
+          Explore The <br />
+          <b>Best Places</b>
         </Title>
 
         <BackImage src={beach_img}></BackImage>
@@ -79,6 +88,9 @@ const Home = () => {
           <Button>Let's go</Button>
         </Link>
       </Container>
+      <Section>
+        <About />
+      </Section>
     </>
   );
 };

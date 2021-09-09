@@ -16,12 +16,20 @@ const MainTitle = styled.h1`
   color: #37766e;
   text-align: center;
   font-size: 24px;
+
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+  }
 `;
 
 const Section = styled.div`
   text-align: center;
   font-size: 14px;
   color: gray;
+
+  @media screen and (max-width: 550px) {
+    font-size: 10px;
+  }
 `;
 const Container = styled.div`
   display: flex;
@@ -42,6 +50,18 @@ const Box = styled.div`
     height: 310px;
     transition: 0.5s;
   }
+
+  @media screen and (max-width: 550px) {
+    width: 140px;
+    height: 240px;
+
+    &: hover {
+      bottom: 10px;
+      width: 170px;
+      height: 270px;
+      transition: 0.5s;
+    }
+  }
 `;
 
 const Image = styled.img`
@@ -60,12 +80,12 @@ const ImgTitle = styled.span`
 `;
 
 const text =
-  "you can find the most beautiful and pleasant places at the best prices with special discount.";
+  "세계를 순례하는 여행객들의 멋진 사진들을 살펴보며 좋은 여행이 주는 가치를 경험해보세요.";
 
 const About = () => {
   return (
     <Background>
-      <MainTitle>Discover The Most Attractive Places</MainTitle>
+      <MainTitle>새롭고 멋진 여행지를 찾아보고, 경험을 공유하세요.</MainTitle>
       <Section>{text}</Section>
       <Container>
         <Box>
