@@ -19,7 +19,7 @@ const ModalButton = styled.button`
   font-size: 40px;
   position: absolute;
   top: 10%;
-  left: 90%;
+  left: 80%;
 
   @media (max-width: 902px) {
     left: 85%;
@@ -33,8 +33,8 @@ const ModalContainer = styled.div`
   top: 60%;
   transform: translate(-50%, -50%);
   max-height: 50rem;
-  width: 80%;
-  height: 70%;
+  width: 550px;
+  height: auto;
   padding: 30px;
   overflow: scroll;
   background: white;
@@ -47,6 +47,7 @@ const ModalContainer = styled.div`
 `;
 
 const Background = styled.div`
+  text-align: center;
   margin-top: 10%;
 `;
 const Container = styled.div`
@@ -55,11 +56,12 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   // border: 1px solid red;
 
-  @media (max-width: 600px) {
-    border: 1px solid red;
+  @media screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
   }
-  @media (max-width: 902px) {
-    grid-template-columns: 1fr;
+
+  @media screen and (min-width: 550px) and (max-width: 870px) {
+    grid-template-columns: repeat(2, minmax(250px, 2fr));
   }
 `;
 
@@ -73,8 +75,12 @@ const Location = styled.h5`
   position: relative;
   bottom: 40%;
   color: white;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 500;
+`;
+
+const Img = styled.img`
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.5);
 `;
 
 const Discover = () => {
@@ -115,12 +121,14 @@ const Discover = () => {
 
   return (
     <Background>
+      <h2>Discover Where You Want.</h2>
       <Container>
         {pics.map((image) => (
           <>
             <PicBox modal={modal} onClick={ModalOpen} key={image.id}>
-              <img src={image.urls.small}></img>
+              <Img src={image.urls.small} alt={image.description}></Img>
               <h4>{image.user.name}</h4>
+
               <Location>
                 {image.location.title ? image.location.title : "anywhere"}
               </Location>

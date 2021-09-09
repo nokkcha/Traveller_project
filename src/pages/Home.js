@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import beach_img from "../assets/beach2.jpg";
-import About from "./About";
 const Container = styled.div`
   margin-top: 16%;
   margin-left: 30px;
@@ -14,6 +13,11 @@ const BackImage = styled.img`
   top: 120px;
   left: 0;
   z-index: -1;
+
+  @media screen and (max-width: 550px) {
+    top: 0;
+    height: 100%;
+  }
 `;
 
 const Button = styled.button`
@@ -26,6 +30,13 @@ const Button = styled.button`
   text-decoration: none;
   border: none;
 
+  @media screen and (max-width: 550px) {
+    width: 80px;
+    padding: 8px;
+    border-radius: 12px;
+    font-size: 8px;
+  }
+
   &: hover {
     background: #39746c;
   }
@@ -33,10 +44,13 @@ const Button = styled.button`
 
 const Title = styled.h1`
   font-size: 48px;
-
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: 0;
+
+  @media screen and (max-width: 550px) {
+    font-size: 30px;
+  }
 `;
 
 const SubTitle = styled.h6`
@@ -44,6 +58,10 @@ const SubTitle = styled.h6`
   color: white;
   font-size: 16px;
   font-weight: 200;
+
+  @media screen and (max-width: 550px) {
+    font-size: 8px;
+  }
 `;
 
 const Home = () => {
@@ -51,7 +69,9 @@ const Home = () => {
     <>
       <Container>
         <SubTitle>Discover your places..</SubTitle>
-        <Title>Explore The Best Places</Title>
+        <Title>
+          Explore The <b>Best Places</b>
+        </Title>
 
         <BackImage src={beach_img}></BackImage>
 
