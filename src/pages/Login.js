@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Link, useHistory } from "react-router-dom";
 
 const Background = styled.div`
+  margin-top: 15%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -31,6 +32,7 @@ const LoginInput = styled.input`
   height: 50px;
   border-radius: 5px;
   margin-bottom: 20px;
+  padding: 0.2em 0.8em;
 
   ::-webkit-input-placeholder {
     color: #dedede;
@@ -39,7 +41,7 @@ const LoginInput = styled.input`
 `;
 const LoginBtn = styled.input`
   border: none;
-  width: 320px;
+  width: 345px;
   height: 50px;
   border-radius: 5px;
   background: #4d95a3;
