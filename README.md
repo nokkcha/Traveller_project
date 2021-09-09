@@ -6,8 +6,7 @@
 <li>회원가입, 로그인(구현 완료)</li>
 <li>반응형 페이지</li>
 <li>CRUD 기능</li>
-<li>upsplash API 활용해 사진첩 생성</li>
-  <li>찜하기 기능</li>
+<li>upsplash API 활용해 사진첩 생성(구현 완료)</li>
 </ul>
 
 사용 기술
