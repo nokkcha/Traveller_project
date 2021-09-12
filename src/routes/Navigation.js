@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
   display: grid;
@@ -15,7 +17,7 @@ const Container = styled.div`
   z-index: 1;
 
   @media screen and (max-width: 550px) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
     position: fixed;
     top: 0;
     right: 0;
@@ -28,6 +30,18 @@ const Container = styled.div`
 const Navigations = styled.nav`
   justify-self: center;
   margin: 10px;
+
+  @media screen and (max-width: 550px) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 26px;
+    left: 60%;
+    width: 12em;
+    background: #337c8e;
+    padding: 10px 0 10px 0;
+    z-index: -1;
+  }
 `;
 
 const SignIn = styled(Link)`
@@ -42,7 +56,7 @@ const SignIn = styled(Link)`
   font-size: 15px;
   margin-right: 20px;
 
-  @media screen and (max-width: 550px) {
+  @media (max-width: 550px) {
     display: none;
   }
 
@@ -61,12 +75,18 @@ const Menu = styled(Link)`
     color: #349386;
   }
 
-
   @media screen and (max-width: 550px) {
-    display:none;
-    font-size: 12px;
-    color: white;
+    color :white;
+    font-size: 13px;
+    margin: 20px;
+    text-align: center;
+    
+
+    &: hover {
+      color: #eff0f0;
+    }
   }
+
 `;
 
 const Title = styled(Link)`
@@ -81,29 +101,57 @@ const Title = styled(Link)`
   }
 `;
 
+const ToggleButton = styled.button`
+  display: none;
+
+  @media screen and (max-width: 550px) {
+    display: inline;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    justify-self: end;
+    margin-right: 20px;
+  }
+`;
+
 const Navigation = ({ isLoggedIn }) => {
+  const [isToggled, setIsToggled] = useState(false);
+
+  const ToggleClick = () => {
+    setIsToggled(!isToggled);
+  };
   return (
     <Container>
       <Title to="/home">
         <h1>Traveller</h1>
       </Title>
       <Navigations>
-        {isLoggedIn ? (
+        {isToggled ? (
           <>
-            <Menu to="/home">Home</Menu>
-            <Menu to="/discovery">Discover</Menu>
-            <Menu to="/board">Board</Menu>
-            <Menu to="/profile">Profile</Menu>
+            {isLoggedIn ? (
+              <>
+                <Menu to="/home">Home</Menu>
+                <Menu to="/discovery">Discover</Menu>
+                <Menu to="/board">Board</Menu>
+                <Menu to="/profile">Profile</Menu>
+              </>
+            ) : (
+              <>
+                <Menu to="/home">Home</Menu>
+                <Menu to="/discovery">Discover</Menu>
+                <Menu to="/login">Login</Menu>
+              </>
+            )}
           </>
         ) : (
-          <>
-            <Menu to="/home">Home</Menu>
-            <Menu to="/discovery">Discover</Menu>
-            <Menu to="/login">Login</Menu>
-          </>
+          <></>
         )}
       </Navigations>
       <SignIn to="/join">Sign In</SignIn>
+      <ToggleButton onClick={ToggleClick}>
+        <FontAwesomeIcon icon={faBars} />
+      </ToggleButton>
     </Container>
   );
 };
