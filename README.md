@@ -1,11 +1,15 @@
-<h1>(진행중)Traveller 프로젝트</h1>
+<h1>Traveller 프로젝트</h1>
+
+<p>
+여행가들의 사진들과 자신들의 경험을 공유할 수 있는 트래블러 프로젝트를 기획해서 제작했습니다. 
+</p>
 
 구현 기능
 
 <ul>
 <li>회원가입, 로그인(구현 완료)</li>
-<li>반응형 페이지</li>
-<li>CRUD 기능</li>
+<li>반응형 페이지(구현 완료)</li>
+<li>CRUD 기능(구현 완료)</li>
 <li>upsplash API 활용해 사진첩 생성(구현 완료)</li>
 </ul>
 
@@ -13,7 +17,7 @@
 
 <ul>
 <li>React</li>
-<li>Redux</li>
+<li>Redux(추후 업데이트..)</li>
 <li>Firebase, Firestore</li>
 <li>Styled-component</li>
 </ul>
