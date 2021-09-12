@@ -9,6 +9,11 @@ const Button = styled.button`
   height: 40px;
   border-radius: 20px;
 `;
+
+const Container = styled.div`
+  margin-top: 20%;
+  text-align: center;
+`;
 const Profile = ({ userObj }) => {
   const [user, setUser] = useState(userObj.displayName);
   const history = useHistory();
@@ -28,8 +33,10 @@ const Profile = ({ userObj }) => {
 
   return (
     <>
-      <h2>안녕하세요,{user}님.</h2>
-      <Button onClick={onClick}>log out</Button>
+      <Container>
+        <h2>안녕하세요,{user}님.</h2>
+        <Button onClick={onClick}>log out</Button>
+      </Container>
     </>
   );
 };

@@ -48,9 +48,9 @@ const ModalContainer = styled.div`
 
 const Background = styled.div`
   text-align: center;
-  margin-top: 15%;
+  margin-top: 20%;
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 600px) {
     margin-top: 30%;
   }
 `;
