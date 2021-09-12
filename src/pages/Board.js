@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   text-align: center;
-  margin: 8%;
+  margin-top: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
