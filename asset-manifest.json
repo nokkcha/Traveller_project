@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Traveller_project/static/css/main.8001b6cf.chunk.css",
-    "main.js": "/Traveller_project/static/js/main.0813a4a4.chunk.js",
-    "main.js.map": "/Traveller_project/static/js/main.0813a4a4.chunk.js.map",
-    "runtime-main.js": "/Traveller_project/static/js/runtime-main.6911502e.js",
-    "runtime-main.js.map": "/Traveller_project/static/js/runtime-main.6911502e.js.map",
-    "static/js/2.97ac5a26.chunk.js": "/Traveller_project/static/js/2.97ac5a26.chunk.js",
-    "static/js/2.97ac5a26.chunk.js.map": "/Traveller_project/static/js/2.97ac5a26.chunk.js.map",
-    "index.html": "/Traveller_project/index.html",
-    "static/css/main.8001b6cf.chunk.css.map": "/Traveller_project/static/css/main.8001b6cf.chunk.css.map",
-    "static/js/2.97ac5a26.chunk.js.LICENSE.txt": "/Traveller_project/static/js/2.97ac5a26.chunk.js.LICENSE.txt",
-    "static/media/bali.569f3d44.jpg": "/Traveller_project/static/media/bali.569f3d44.jpg",
-    "static/media/beach2.5ea24b32.jpg": "/Traveller_project/static/media/beach2.5ea24b32.jpg",
-    "static/media/porto.a96364c0.jpg": "/Traveller_project/static/media/porto.a96364c0.jpg",
-    "static/media/seoul.45dee6a8.jpg": "/Traveller_project/static/media/seoul.45dee6a8.jpg"
+    "main.css": "/Traveller_project/index.html/static/css/main.8001b6cf.chunk.css",
+    "main.js": "/Traveller_project/index.html/static/js/main.0813a4a4.chunk.js",
+    "main.js.map": "/Traveller_project/index.html/static/js/main.0813a4a4.chunk.js.map",
+    "runtime-main.js": "/Traveller_project/index.html/static/js/runtime-main.df2db09d.js",
+    "runtime-main.js.map": "/Traveller_project/index.html/static/js/runtime-main.df2db09d.js.map",
+    "static/js/2.1723dbb1.chunk.js": "/Traveller_project/index.html/static/js/2.1723dbb1.chunk.js",
+    "static/js/2.1723dbb1.chunk.js.map": "/Traveller_project/index.html/static/js/2.1723dbb1.chunk.js.map",
+    "index.html": "/Traveller_project/index.html/index.html",
+    "static/css/main.8001b6cf.chunk.css.map": "/Traveller_project/index.html/static/css/main.8001b6cf.chunk.css.map",
+    "static/js/2.1723dbb1.chunk.js.LICENSE.txt": "/Traveller_project/index.html/static/js/2.1723dbb1.chunk.js.LICENSE.txt",
+    "static/media/bali.569f3d44.jpg": "/Traveller_project/index.html/static/media/bali.569f3d44.jpg",
+    "static/media/beach2.5ea24b32.jpg": "/Traveller_project/index.html/static/media/beach2.5ea24b32.jpg",
+    "static/media/porto.a96364c0.jpg": "/Traveller_project/index.html/static/media/porto.a96364c0.jpg",
+    "static/media/seoul.45dee6a8.jpg": "/Traveller_project/index.html/static/media/seoul.45dee6a8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6911502e.js",
-    "static/js/2.97ac5a26.chunk.js",
+    "static/js/runtime-main.df2db09d.js",
+    "static/js/2.1723dbb1.chunk.js",
     "static/css/main.8001b6cf.chunk.css",
     "static/js/main.0813a4a4.chunk.js"
   ]
