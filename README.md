@@ -30,3 +30,6 @@
 
 <img width="875" alt="스크린샷 2021-09-04 오전 12 27 13" src="https://user-images.githubusercontent.com/74946505/132030315-3bbea3fa-566d-45bb-8779-0fc5acd0fe12.png">
 <img width="873" alt="스크린샷 2021-09-04 오전 12 26 59" src="https://user-images.githubusercontent.com/74946505/132030332-857b2b9c-b9b6-4f3f-8264-bdae54608052.png">
+
+![Traveller_1](https://user-images.githubusercontent.com/74946505/133021444-24324111-e227-4511-b078-79e87c8dba0f.gif)
+
